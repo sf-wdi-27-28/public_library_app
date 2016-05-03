@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <% flash.each do |name,msg| %>
+    <p>
+      <small> <%= name.capitalize %>: <%= msg %> </small>
+    </p>
+  <% end %>
+
 <%= yield %>
 
   <ul>
@@ -19,6 +25,6 @@
       <li><%= link_to "Log In", login_path %></li>
     <% end %>
   </ul>
-  
+
 </body>
 </html>

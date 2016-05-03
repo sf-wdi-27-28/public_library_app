@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password)
     @user = User.create(user_params)
     login(@user)
     redirect_to root_path
@@ -20,6 +19,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     render :show
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
 
 end
