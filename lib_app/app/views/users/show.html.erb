@@ -1,0 +1,7 @@
+<div>
+  Welcome,<h3> <%= @user.email %> </h3>
+  <br>
+  Account created at:<strong> <%= @month %></strong>
+  at Time : <strong><%= @daytime %></strong>
+  <%= link_to "edit user", user_edit_path, :class=>"btn btn-success" %>
+</div>
