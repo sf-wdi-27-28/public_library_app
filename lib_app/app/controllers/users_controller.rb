@@ -9,12 +9,27 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    login(@user)
-    redirect_to @user
+    @user = User.new(user_params)
+    if @user.save
+      login(@user)
+      redirect_to @user
+      flash[:notice] = "Welcome, #{@user.email}!"
+    else
+      flash[:error] = "Email must be unique"
+      redirect_to signup_path
+    end
   end
   def show
     @user = User.find_by_id(params[:id])
+    if current_user != @user
+      redirect_to root_path
+    end
+  end
+  def party
+    @user = current_user
+    if current_user.nil?
+      redirect_to root_path
+    end
   end
 
   private
