@@ -7,6 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <% if current_user %>
+      <li> <%= link_to "profile", user_path(current_user) %> </li>
+      <li> <%= link_to "log out", logout_path %> </li>
+      <% else %>
+      <li> <%= link_to "sign up", new_user_path %> </li>
+      <li> <%= link_to "log in", login_path %> </li>
+    <% end %>
+  </ul>
+
+  <% flash.each do |name, msg| %>
+    <p>
+      <small> <%= name.capitalize %>: <%= msg %> </small>
+    </p>
+  <% end %>
 
 <%= yield %>
 

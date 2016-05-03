@@ -2421,3 +2421,1697 @@ Processing by UsersController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
   Rendered users/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+
+
+Started GET "/" for ::1 at 2016-05-03 14:41:28 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-03 14:41:28 -0700
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:41:31 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd5210718b0>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.1ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:41:31 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51b372a10>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:41:42 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:41:43 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd5210fe5f8>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:41:44 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd521a88650>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:42:00 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51a560800>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51b531c48>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.5ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:42:05 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:06 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51b768958>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:07 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd522106298>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:42:10 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:12 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd52213e8f0>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:12 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd5194d07b0>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:42:14 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51f473b90>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:42:18 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd521830790>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.6ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:42:24 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:43:54 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd52114d450>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276679504240'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.8ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:43:54 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd51a51a058>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.6ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:48:34 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `sumbit' for #<ActionView::Helpers::FormBuilder:0x007fd5220856e8>):
+     7:   <div>
+     8:     <%= f.password_field :password_digest, placeholder: "password" %>
+     9:   </div>
+    10:   <%= f.sumbit "sign in" %>
+    11: <% end %>
+  app/views/sessions/new.html.erb:10:in `block in _app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb__170842790351057252_70276631350200'
+  app/controllers/sessions_controller.rb:5:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.6ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:48:53 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-03 14:48:53 -0700
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:36 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-03 14:53:36 -0700
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:41 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:42 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:53:43 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:44 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:53:47 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:53:56 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:57 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:53:58 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:53:58 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:54:01 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:54:15 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 14:54:19 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2xZPnk7QcqUZSx51pJM+mQ/Jvr+fED4eqCg2ClgZmQ1qx0tAXzDvcOk6hb8K49Pn+erQaXN34Cm6yHweaJCXA==", "user"=>{"email"=>"ortiz6499@gmail.com", "password_digest"=>"[FILTERED]"}, "commit"=>"sign in"}
+Unpermitted parameter: password_digest
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "ortiz6499@gmail.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:54:19 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 14:54:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hwM5b/vVQ9BKiq2CIKnm0mnXLPRseM4X1mdI5BF1pazJxH18g5LBpx1La+0KECVnkg+hTzfJUW8KLMnMQbeBlA==", "user"=>{"email"=>"ortiz6499@gmail.com", "password_digest"=>"[FILTERED]"}, "commit"=>"sign in"}
+Unpermitted parameter: password_digest
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "ortiz6499@gmail.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 68ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:54:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:54:28 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2016-05-03 14:54:45 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NLqWT38tmrv1OKN7nUVGjZDRdY6bKydZk4F1ZdgWcTd6fdJcB2oYzKL5ZRS3/IU4awn4NcCauCFPyvRNiNRVDw==", "user"=>{"first_name"=>"bobby", "last_name"=>"tables", "email"=>"bobbyT@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "bobby"], ["last_name", "tables"], ["email", "bobbyT@gmail.com"], ["password_digest", "$2a$10$8/WVcI6v/hGMXXTS8VpQA.MB0L8FFilBsfJQ/vONN3j32YQ8IH3IG"], ["created_at", "2016-05-03 21:54:45.511844"], ["updated_at", "2016-05-03 21:54:45.511844"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.7ms)
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/helpers/sessions_helper.rb:3:in `login'
+  app/controllers/users_controller.rb:15:in `create'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 14:55:34 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:55:40 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 14:55:45 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2KmvOXk16ELlIwpWdC4jG+sja04w8feSLTBEEE/O8xFpeKvnaNV1lxVSkZzaXs5lHQAFmNyWKaU/0A4Ef0f9A==", "user"=>{"email"=>"bobbyT@gmail.com", "password_digest"=>"[FILTERED]"}, "commit"=>"sign in"}
+Unpermitted parameter: password_digest
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "bobbyT@gmail.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:55:45 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 14:56:36 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XtArNz+DqFgzxf/ErCZuCxLX4uf3J5/TiL8aybsjWwcQF28kR8QqL2QEOauGn62+6Q9vXKyWAKtU9Jvh6+F/Pw==", "user"=>{"email"=>"bobbyT@gmail.com", "password_digest"=>"[FILTERED]"}, "commit"=>"sign in"}
+Unpermitted parameter: password_digest
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "bobbyT@gmail.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 78ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:36 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:39 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:40 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:56:41 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:56:46 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:56:47 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:48 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 14:56:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6qMycaRLLF73C651xKQ/x4sWPGI9J9NJRB2g23zRuYukZHZi3AyuKaDKaBruHfxycM6x2WaWTDGYViHzLBOdsw==", "user"=>{"email"=>"ortiz6499@gmail.com", "password_digest"=>"[FILTERED]"}, "commit"=>"sign in"}
+Unpermitted parameter: password_digest
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "ortiz6499@gmail.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 74ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:53 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 14:56:56 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 14:56:57 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2016-05-03 14:57:10 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oVhxn+KNEhza5fhZlXUt3y5s8iwPmdP8vx17+4Xy6J/vnzWMmsqQa40kPja/zO5q1bR/l1QoTIRjVvrT1TDMpw==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"test@aol.com", "password"=>"[FILTERED]"}, "commit"=>"sign up"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "test"], ["last_name", "test"], ["email", "test@aol.com"], ["password_digest", "$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u"], ["created_at", "2016-05-03 21:57:10.566688"], ["updated_at", "2016-05-03 21:57:10.566688"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 74ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 14:57:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Maverick/GitHub/WDI/public_library_app/lib_app/app/views"
+):
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (46.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.8ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 14:59:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (11.1ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 12.1ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 15:02:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.1ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 15:02:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 15:02:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.9ms)
+
+
+Started GET "/users/" for ::1 at 2016-05-03 15:02:24 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.1ms)
+
+
+Started GET "/users/3" for ::1 at 2016-05-03 15:02:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:03:04 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.1ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 15:03:14 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:10:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (77.8ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 15:10:07 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:10:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 15:11:17 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:10:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.1ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 15:11:48 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:10:in `new'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.0ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-03 15:12:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.2ms)
+
+
+Started GET "/users/" for ::1 at 2016-05-03 15:12:08 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4580043230450692119_70276679821660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.9ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for ::1 at 2016-05-03 15:16:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1599700384912381363_70168656866140'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.1ms)
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160503205725)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160503205725"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2016-05-03 15:18:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__986980398673054320_70226495893700'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:21:13 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 180697ms (ActiveRecord: 6.6ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:10:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__986980398673054320_70226495893700'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.1ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:24:14 -0700
+Processing by UsersController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1
+Completed 500 Internal Server Error in 7263ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"....
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "id"."id" = 3 AND "id"."email" = 'test@aol.com' AND "id"."first_name" = 'test' AND "id"."last_name" = 'test' AND "id"."password_digest" = '$2a$10$emH3eMfqcoddYDsIRJUvO..Pj9/OOsQGU1oCbDisPdCE4scg1NR9u' AND "id"."created_at" = '2016-05-03T21:57:10.566Z' AND "id"."updated_at" = '2016-05-03T21:57:10.566Z' LIMIT 1):
+     8: </head>
+     9: <body>
+    10:   <ul>
+    11:     <% if current_user %>
+    12:       <li> <%= link_to "profile", user_path(current_user) %> </li>
+    13:       <li> <%= link_to "log out", logout_path %> </li>
+    14:       <% else %>
+  app/helpers/sessions_helper.rb:10:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__986980398673054320_70226495893700'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.8ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Maverick/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:24:22 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1663ms (Views: 1657.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-03 15:24:23 -0700
+
+
+Started GET "/login" for ::1 at 2016-05-03 15:30:54 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (19.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-03 15:30:56 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2016-05-03 15:31:07 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kc1K/4gd04qfs+ZSxiBghoXg5WGW/9Ve6g8H3LMXgHZEO15mn1geZUoLcLMdIQYpvjOn7QDRnSA87SsJcFWaZA==", "user"=>{"first_name"=>"bobby", "last_name"=>"tables", "email"=>"bobbyT@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "bobby"], ["last_name", "tables"], ["email", "bobbyT@gmail.com"], ["password_digest", "$2a$10$d82nWU8yIKYwnHSZtLc1FeHSp.WU6yP9nv.ulPoS7VuIoyu6ggjbu"], ["created_at", "2016-05-03 22:31:07.420642"], ["updated_at", "2016-05-03 22:31:07.420642"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 77ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-03 15:31:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-03 15:31:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for ::1 at 2016-05-03 15:31:16 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:31:16 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
