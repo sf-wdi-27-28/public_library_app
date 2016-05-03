@@ -2477,3 +2477,5 @@ Processing by UsersController#show as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
   Rendered users/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
