@@ -12,6 +12,13 @@ Rails.application.routes.draw do
     get "users/:id", to: "users#show", as: "user"
 
     get "/login", to: "sessions#new"
+
+    get "/login", to: "sessions#new"
+
+    get "/logout", to: "sessions#destroy"
+
+    post "/sessions", to: "sessions#create"
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
