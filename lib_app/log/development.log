@@ -600,3 +600,79 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.erb within layouts/application (0.1ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
 Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for ::1 at 2016-05-03 15:02:18 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:02:18 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (21.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 104ms (Views: 87.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 15:02:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 15:02:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGmQFLZuBrXFzJNipsbvedFXWnB2WV1fFuRhvExApYpaJD+7VV5ow1bMu8ycN7IhwX25ieOf1ZuXYpl/uSX5Rg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 87ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-03 15:02:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for ::1 at 2016-05-03 15:02:25 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 15:02:25 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for ::1 at 2016-05-03 15:02:26 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-03 15:02:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gOQ3D4SOovy5ZX3eyeAdcE7yGQgS9o4+XplTFncaD0OaqZigZ77MiiplVXDzEUAoXtj68YcwBvrfH6vVgn9Tjw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 77ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-03 15:02:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.6ms)
