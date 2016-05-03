@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @user = User.new
   end
   def create
-    user_params = params.require(:user).permit(:email,:password)
+    user_params
     @user = User.confirm(user_params)
     if @user
       login(@user)
@@ -18,5 +18,10 @@ class SessionsController < ApplicationController
     logout
     flash[:notice] = "Successfully logged out."
     redirect_to root_path
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:email,:password)
   end
 end

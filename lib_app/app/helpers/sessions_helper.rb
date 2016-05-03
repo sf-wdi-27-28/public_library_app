@@ -1,5 +1,6 @@
 module SessionsHelper
   def login(user)
+    session[:formated_time] = Time.now.strftime("on %d/%m/%Y at %I:%M%p")
     session[:user_id] = user.id
     @current_user = user
   end
