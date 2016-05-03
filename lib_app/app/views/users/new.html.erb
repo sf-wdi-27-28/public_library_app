@@ -1,4 +1,5 @@
 Sign Up
+
 <%= form_for @user do |f| %>
   <div>
     <%= f.text_field :first_name, placeholder: "First Name" %>
@@ -12,5 +13,4 @@ Sign Up
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
-  <%= f.submit "Sign Up" %>
 <% end %>
