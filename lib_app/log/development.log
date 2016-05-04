@@ -2350,3 +2350,7 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-03 22:08:50 -0700
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (38.5ms)[0m  INSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "test@yopmail.com"], ["first_name", "Test"], ["last_name", "Subject_01"], ["password_digest", "$2a$10$geDlUQhKwZ6FoCyba4BxKO76UHYuKEFzpVNahw8Eto8GKvNBEuPT6"], ["created_at", "2016-05-04 05:17:28.962653"], ["updated_at", "2016-05-04 05:17:28.962653"]]
+  [1m[36m (23.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (43.4ms)[0m  SELECT "users".* FROM "users"
