@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   post "/users", to: "users#create", as: "post_user"
   get "/users/:id", to: "users#show", as: "user"
 
-  get "/login", to: "sessions#new"
-  post "/sessions", to: "sessions#create"
-  get "/logout", to: "sessions#destroy"
+  get "/login", to: "sessions#new", as: "new_session"
+  post "/sessions", to: "sessions#create", as: "create_session"
+  get "/logout", to: "sessions#destroy", as: "destroy_session"
+
+  get "/libraries", to: "libraries#index", as: "libraries"
+
+
 
 end
