@@ -5,4 +5,12 @@ class UsersController < ApplicationController
     render :index
   end
 
+  def new
+    @users = User.new
+    render :new
+  end
+
+
+
+  
 end
