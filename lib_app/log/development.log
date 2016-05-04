@@ -2884,3 +2884,46 @@ Started GET "/login" for ::1 at 2016-05-04 00:23:47 -0700
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+
+
+Started POST "/sessions" for ::1 at 2016-05-04 00:32:16 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fi4DX8RRvmP1gAJOumin8J1rI+kCE3Z/6etsNUmc+ay6eXyRhoi9iqK7nb3vc9JTnRHfcuUTVHI+C4TnSCHe/Q==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.com"]]
+Redirected to 
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 3.1ms)
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.5ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.3ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jacquelynfambrough/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.5ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-04 00:32:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fi4DX8RRvmP1gAJOumin8J1rI+kCE3Z/6etsNUmc+ay6eXyRhoi9iqK7nb3vc9JTnRHfcuUTVHI+C4TnSCHe/Q==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "test@test.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 96ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-04 00:32:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.4ms)
