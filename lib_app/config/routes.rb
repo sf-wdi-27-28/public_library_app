@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get "/users/new", to: "users#new", sa: "new_user"
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
+  get "/login", to: "sessions#new"
+  
+  post "/sessions", to: "sessions#create"
 end
