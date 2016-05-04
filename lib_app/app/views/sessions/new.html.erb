@@ -1,11 +1,11 @@
 Login
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+<%= form_for @user,:class => "form-group", url: "/sessions", method: "post" do |f| %>
   <div>
     <%= f.text_field :email, placeholder: "Email" %>
   </div>
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
-  <%= f.submit "Sign In" %>
+  <%= f.submit "Sign In", class: "btn-primary-outline" %>
 <% end %>
