@@ -8,19 +8,19 @@
 </head>
 <body>
   <% flash.each do |name, msg| %>
-    <p>
+    <p style="height : 35px; width : 100%; background-color: green; font-size: 25px; ">
       <small><%= name.capitalize %> : <%= msg %></small>
     </p>
   <% end %>
-  <ul>
+  <nav>
   <% if current_user %>
-    <li><%= link_to "Profile", user_path(current_user) %></li>
-    <li><%= link_to "Log Out", logout_path %></li>
+    <a><%= link_to "Profile", user_path(current_user), class: "nav-item nav-link" %></a>
+    <a><%= link_to "Log Out", logout_path, class: "nav-item nav-link"%></a>
   <% else %>
-    <li><%= link_to "Create Account", new_user_path %></li>
-    <li><%= link_to "Log In", login_path %></li>
+    <a><%= link_to "Create Account", new_user_path, class: "nav-item nav-link" %></a>
+    <a><%= link_to "Log In", login_path, class: "nav-item nav-link" %></a>
   <% end %>
-</ul>
+  </nav>
 
 <%= yield %>
 

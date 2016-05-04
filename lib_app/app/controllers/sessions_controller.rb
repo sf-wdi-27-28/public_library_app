@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-# skip_before_filter :require_login
 
   def new
     @user = User.new
@@ -17,6 +16,7 @@ class SessionsController < ApplicationController
       redirect_to login_path
     end
   end
+
   def destroy
     logout
     flash[:notice] = "Logged you out bra"
