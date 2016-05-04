@@ -1,0 +1,11 @@
+Log in
+
+<%= form_for @user, url: "/sessions", method: "post" do |u| %>
+  <div class="">
+    <%= u.text_field :email, placeholder: "email" %>
+  </div>
+  <div class="">
+    <%= u.password_field :password, placeholder: "password" %>
+  </div>
+  <%= u.submit "sign in" %>
+<% end %>
