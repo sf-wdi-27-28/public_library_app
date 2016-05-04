@@ -20,13 +20,13 @@
     <small><%= name.capitalize %> : <%= msg %></small>
   </div>
   <% end %>
-  <nav>
+  <nav class="navbar navbar-dark bg-inverse">
   <% if current_user %>
-    <a><%= link_to "Profile", user_path(current_user), class: "nav-item nav-link" %></a>
-    <a><%= link_to "Log Out", logout_path, class: "nav-item nav-link"%></a>
+    <a><%= link_to "Profile", user_path(current_user), :class => "nav-item nav-link" %></a>
+    <a><%= link_to "Log Out", logout_path, :class => "nav-item nav-link"%></a>
   <% else %>
-    <a><%= link_to "Create Account", new_user_path, class: "nav-item nav-link" %></a>
-    <a><%= link_to "Log In", login_path, class: "nav-item nav-link" %></a>
+    <a><%= link_to "Create Account", new_user_path, :class => "nav-item nav-link" %></a>
+    <a><%= link_to "Log In", login_path, :class => "nav-item nav-link" %></a>
   <% end %>
   </nav>
 

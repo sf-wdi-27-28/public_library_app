@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless current_user
+      flash[:notice] = "You must log in to see the user page."
       redirect_to login_url
     end
   end
