@@ -1,0 +1,17 @@
+<h1>Welcome to Users Index</h1>
+
+<div>
+  There are currently <%= @users.length %> signed_up
+</div>
+<br>
+<br>
+
+<% @users.each do |user| %>
+  <br>
+  <p><%= user.email %></p>
+  <p><%= user.first_name %></p>
+  <p><%= user.last_name %><p>
+  <br>
+  <br>
+  <br>
+<% end %>
