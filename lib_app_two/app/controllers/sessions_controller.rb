@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user_params = params.require(:user).permit(:email, :password)
     @user = User.confirm(user_params)
     if @user
       login(@user)
@@ -21,5 +20,10 @@ class SessionsController < ApplicationController
       flash[:error] = "Incorrect email or password"
       redirect_to login_path
     end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :password)
   end
 end
