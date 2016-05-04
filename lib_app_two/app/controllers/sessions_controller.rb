@@ -4,6 +4,11 @@ class SessionsController < ApplicationController
     render :new
   end
 
+  def destroy
+    logout
+    redirect_to root_path
+  end
+
   def create
     user_params = params.require(:user).permit(:email, :password)
     @user = User.confirm(user_params)
